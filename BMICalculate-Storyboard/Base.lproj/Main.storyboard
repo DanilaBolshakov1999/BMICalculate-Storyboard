@@ -49,11 +49,14 @@
                                             <constraint firstAttribute="height" constant="21" id="MVk-Ia-jUD"/>
                                         </constraints>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Kmu-Vj-oQB">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="Kmu-Vj-oQB">
                                         <rect key="frame" x="-2" y="567" width="365" height="61"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="fGL-mk-IC7"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="heightSliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="LAL-l8-r06"/>
+                                        </connections>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ve6-CX-6jD">
                                         <rect key="frame" x="0.0" y="627" width="361" height="21"/>
@@ -75,11 +78,14 @@
                                             <constraint firstAttribute="height" constant="21" id="njV-ZV-jwH"/>
                                         </constraints>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="a93-nD-q0i">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="a93-nD-q0i">
                                         <rect key="frame" x="-2" y="648" width="365" height="61"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="Qc2-b7-BTZ"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="weightSliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Kp9-Wa-nO5"/>
+                                        </connections>
                                     </slider>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdb-B0-4Yc">
                                         <rect key="frame" x="0.0" y="708" width="361" height="51"/>
@@ -92,6 +98,9 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="calculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9rO-aG-rWN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -105,6 +114,12 @@
                             <constraint firstItem="GjB-TD-kCy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="SBD-t5-tAh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="heightLabel" destination="wiB-ib-RdX" id="Luh-5y-eDl"/>
+                        <outlet property="heightSlider" destination="Kmu-Vj-oQB" id="LIl-g8-aa3"/>
+                        <outlet property="weightLabel" destination="tge-lb-SG4" id="EGO-Yv-FGD"/>
+                        <outlet property="weightSlider" destination="a93-nD-q0i" id="0dC-EB-LZR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
